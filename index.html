@@ -24,8 +24,8 @@
                 </a>
                 <ul class="nav-list">
                     <li><a href="#AboutMe" class="nav-link">About me</a></li>
-                    <li><a href="#Stacks    " class="nav-link">Stacks</a></li>
-                    <li><a href="" class="nav-link">Contact me</a></li>
+                    <li><a href="#Stacks" class="nav-link">Stacks</a></li>
+                    <li><a href="#ContactMe" class="nav-link">Contact me</a></li>
                 </ul>
                 <a href="#" class="nav-link btn nav-btn">
                     <i class="fa-solid fa-file-arrow-down"></i>
@@ -46,9 +46,9 @@
 
             <article class="container-row hidden" id="AboutMe">
                 <section class="container-column">
-                    <h3>Hi, I'm</h3>
-                    <h1>Bryan José Chacón Reyes</h1>
-                    <h2>A <span style="color: #3511c4;">Software Developer</span></h2>
+                    <h3 class="hidden">Hi, I'm</h3>
+                    <h1 class="hidden">Bryan José Chacón Reyes</h1>
+                    <h2 class="hidden">A <span style="color: #3511c4;">Software Developer</span></h2>
                     <p>I'm a software engineer with entry experience on developing applications
                         for solving problems of any type for your company. I am someone that is
                         constantly learning new things related with technologies to develop software.
@@ -62,7 +62,7 @@
                         the most optimal solution.
                     </p>
                 </section>
-                <img src="/assets/portraid.png" />
+                <img class="hidden" src="/assets/portraid.png" />
             </article>
 
             <article id="Stacks" class="container-column hidden">
@@ -117,26 +117,60 @@
                 <section class="container-column">
                     <h2 class="hidden">Front-end</h2>
                     <p class="hidden">
-                        I am highly skilled in <strong>HTML, CSS, JS and React</strong>, which are the essential components of <strong> modern web
-                        design</strong>. With
+                        I am highly skilled in <strong>HTML, CSS, JS and React</strong>, which are the essential
+                        components of <strong> modern web
+                            design</strong>. With
                         these tools, I have the ability to create visually appealing and functional web pages that have
-                        <strong> high performance </strong>and <strong> responsive design</strong>. I understand the importance of 
-                        responsive design in today's world and know how to ensure that a website is accessible 
+                        <strong> high performance </strong>and <strong> responsive design</strong>. I understand the
+                        importance of
+                        responsive design in today's world and know how to ensure that a website is accessible
                         and <strong> user-friendly </strong> on <strong>all devices</strong>, from desktop computers
                         to smartphones. With my expertise in HTML, CSS and JS, I can create web pages that have engaging
-                        visuals, fast loading times and intuitive navigation, making them a <strong>great user experience</stron>.  
+                        visuals, fast loading times and intuitive navigation, making them a <strong>great user
+                            experience</stron>.
                     </p>
                 </section>
             </article>
-            <article class="container-row hidden" id="ContacMe">
-                <section class="container-column hidden">
-                    <h2 class="hidden">Contact me</h2>
-                    <p>
-                        <span>Ok let's talk!</span>
-                        <span>E-mail: <a href="mailto:bryanchaconreyes@gmail.com" class="content-link">bryanchaconreyes@gmail.com</a> </span>
-                    </p>
-                </section>
-                <img src="assets/contact_me.png" alt="" class="hidden">
+            <article class="container-column hidden" id="ContactMe">
+                <h2 class="hidden">Contact me</h2>
+                <div class="container-row">
+                    <section class="container-column hidden">
+                        <h3>Ok let's talk!</h3>
+                        <p>
+                            <span><i class="fa-brands fa-linkedin"></i>
+                                &nbspLinkedin:<a href="https://www.linkedin.com/in/bryan-j-chac%C3%B3n-reyes-aa118b228/"
+                                    class="content-link">Bryan J. Chacón Reyes</a></span>
+                            <br><span><i class="fa-regular fa-envelope"></i>&nbsp Email:  bryanchaconreyes@gmail.com</span>
+                        </p>
+                        <form
+                            action="mailto:bryanchaconreyes@gmail.com?subject=I saw you page and I want to talk to you about business"
+                            method="POST" enctype="text/plain" class="container-column">
+                            <fieldset class="email-form">
+                                <legend>I saw your page and I want to talk to you</legend>
+                                <div class="hidden">
+                                    <div class="form-box">
+                                        <label for="email-form-name">Name</label>
+                                        <input type="text" name="name" id="email-form-name" required autocomplete="off" />
+                                    </div>
+    
+                                    <div class="form-box">
+                                        <label for="email-form-email">Email</label>
+                                        <input type="email" name="email" id="email-form-email" required autocomplete="off"/>
+                                    </div>
+                                    <div class="form-box">
+                                        <label for="email-form-comments">Type your message here</label>
+                                        <textarea rows="3" cols="35" name="message" id="email-form-comments" required></textarea>
+                                    </div>
+                                    <div class="form-box">
+                                        <button class="btn hidden"><i class="fa-regular fa-paper-plane"></i>&nbspSubmit</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </section>
+                    <img src="assets/contact_me.png" alt="" class="hidden">
+                </div>
+                
             </article>
         </div>
         <footer class="container-row">

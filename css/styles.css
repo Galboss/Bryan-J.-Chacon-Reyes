@@ -87,15 +87,13 @@ main {
     background-color: black;
 }
 
-
-
-
 .btn {
     background-color: black;
     color: white;
     padding: 10px 8px;
     border-radius: 10px;
     transition: 0.5s ease;
+    font-size: 12pt;
 }
 
 .btn:hover {
@@ -130,6 +128,8 @@ main {
     width: 90%;
     margin-left: 5%;
     border-radius: 45px 45px 0 0;
+    align-items: center;
+    justify-content: space-around;
 }
 
 
@@ -153,9 +153,8 @@ p {
     font-size: 16pt;
 }
 
-#AboutMe p {
-    max-width: 45vw;
-
+#AboutMe section {
+    width: 50vw;
 }
 
 #AboutMe img {
@@ -166,19 +165,17 @@ p {
 #Stacks {
     width: 90%;
     margin: 5%;
-}
-
-#Stacks p {
-    max-width: 50vw;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .card-stack-display {
     display: flex;
     flex-direction: row;
-    min-width: 50%;
+    min-width: 45vw;
     height: min-content;
     flex-grow: 1;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin: auto 0;
 }
 
@@ -216,7 +213,7 @@ p {
 }
 
 #Back-end{
-    padding: 25px 0 25px 50px;
+    /* padding: 25px 0 25px 50px; */
     margin-left: 5%;
     max-width: 90vw;
     align-items: center;
@@ -225,27 +222,123 @@ p {
 
 #Front-end{
     margin-left: 5%;
-    max-width: 85vw;
+    max-width: 90vw;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     border-radius: 0 0 45px 45px;
-    padding: 0 40px 0 0;
     box-shadow: 16px 16px 25px 5px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
 }
+#Back-end section{
+    width:55vw;
+}
 
-#Back-end img, #Front-end img{
-    width: 35vw;
+#Front-end section{
+    width: 55vw;
+}
+
+#Back-end img, #Front-end img, #ContactMe img{
+    width: 30vw;
     object-fit: contain;
     filter: drop-shadow(10px -9px 2px #000000EE);
     transition: 1s ease;
 }
 
-#Back-end img:hover, #Front-end img:hover{
+#Back-end img:hover, #Front-end img:hover, #ContactMe img:hover{
     filter: none;
 }
-  
 
+#ContactMe{
+    background-color: #c4baec;
+    max-width: 90vw;
+    margin: 0 0 20px 5%;
+    border-radius: 45px;
+    padding: 25px 0 0 0px;
+}
+
+#ContactMe h2{
+    text-align: center;
+}
+
+#ContactMe section{
+    justify-content: space-around;
+}
+
+.content-link{
+    color: black;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.content-link:hover{
+    color: #0c55af;
+}
+
+.email-form {
+    border-radius: 22px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 0 0 0 0;
+    background-color: #ffffffAA ;
+    min-width: 45vw;
+    margin-bottom: 20px;
+}
+.email-form div{
+    margin: 0 auto;
+    display: grid;
+    width: 90%;
+}
+.form-box{
+    width: 100%;
+    position: relative;
+    padding: 10px 0 10px 0;
+}
+
+.form-box input{
+    width: 100%;
+    font-size: 16pt;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    transition: 0.5s ease;
+    height: 1px;
+    font-family: inherit;
+}
+
+.form-box input:focus, .form-box input:valid{
+    background-color: #fff;
+    padding: 20px 0;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+.form-box textarea{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    transition: height 0.5s linear;
+    max-height: 1px;
+    font-family: inherit;
+}
+
+.form-box textarea:focus, .form-box textarea:valid{
+    max-height: fit-content;
+    border-radius: 6px;
+    background-color: white;
+    border: 1px solid black;
+    font-size: 16pt;
+}
+
+
+.email-form legend{
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    margin-left: 15px;
+    padding: 0 8px;
+}
 
 /* Footer section */
 footer {
@@ -289,9 +382,8 @@ footer {
         font-size: 3.5vw;
         margin: 0;
     }
-
-    #AboutMe p {
-        max-width: 80vw;
+    #AboutMe section,#Back-end section, #Front-end section{
+        width: 85vw;
     }
 
     #AboutMe img {
@@ -302,7 +394,7 @@ footer {
     #Back-end   {
         padding: 25px 0;
     }
-    #Back-end img,#Front-end img{
+    #Back-end img,#Front-end img, #ContactMe img{
         width: 65vw;
         object-fit: contain;
     }
@@ -314,10 +406,6 @@ footer {
 
     #Stacks section {
         flex-direction: column-reverse;
-    }
-
-    #Stacks p {
-        max-width: 80vw;
     }
 }
 
@@ -409,15 +497,6 @@ footer {
     #Stacks section {
         flex-wrap: wrap-reverse;
     }
-
-    #back-end p{
-        max-width: 90vw;
-    }
-
-    #Stacks p {
-        max-width: 90vw;
-    }
-
     .card-stack-display {
         margin-top: 25px;
     }
