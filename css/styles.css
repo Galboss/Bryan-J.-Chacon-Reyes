@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+    --background-color:white;
+    --text-color:black;
+    --bg-dark:rgb(29, 29, 29);
+    --bg-light:white;
+    --txt-dark:white;
+    --txt-light:black;
+    --filter-img:0%;
+}
 
 html,
 body {
@@ -7,6 +15,8 @@ body {
     margin: 0 0 0 0;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    background-color: var(--background-color);
+    transition: 1s ease;
 }
 
 main {
@@ -23,10 +33,11 @@ main {
     width: 100%;
     display: flex;
     flex-direction: row;
-    background-color: #fff;
+    background-color: var(--background-color);
     min-height: 75px;
     align-items: center;
-    border-bottom: 0.2px solid black;
+    border-bottom: 0.2px solid var(--text-color);
+    transition: 1s ease;
 }
 
 .nav-logo {
@@ -34,11 +45,13 @@ main {
     flex-direction: row;
     align-items: center;
     margin-left: 35px;
+    color: var(--text-color);
 }
 
 .nav-logo img {
     max-width: 50px;
-    filter: opacity(8) drop-shadow(0 0 0 black);
+    /* filter: opacity(100%) drop-shadow(0 0 0 var(--text-color)); */
+    filter: invert(var(--filter-img));
     margin-right: 10px;
 }
 
@@ -60,7 +73,7 @@ main {
 
 .nav-link {
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
 }
 
 #language {
@@ -69,6 +82,7 @@ main {
 
 #language img {
     max-width: 25px !important;
+    filter: invert(var(--filter-img));
 }
 
 .burger {
@@ -84,27 +98,84 @@ main {
     margin: 3px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: black;
+    background-color: var(--text-color);
 }
 
 .btn {
-    background-color: black;
-    color: white;
+    background-color: var(--text-color);
+    color: var(--background-color);
     padding: 10px 8px;
     border-radius: 10px;
     transition: 0.5s ease;
     font-size: 12pt;
+    border: none;
 }
 
 .btn:hover {
-    background-color: white;
+    background-color: var(--background-color);
     filter: none;
-    border: 0.5px solid black;
-    color: black;
+    border: 0.5px solid var(--text-color);
+    color: var(--text-color);
 }
 
-.nav-btn {
-    margin: 0 10px 0 auto;
+.nav-switch-toggler {
+    margin: 0 35px 0 auto;
+    position: relative;
+    width: 60px;
+    height: 34px;
+    display: inline-block;
+}
+
+.nav-switch-toggler input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--text-color);
+    transition: 0.7s ease;
+    color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    transition: 0.4s ease;
+    background-color: var(--background-color);
+}
+
+input:checked + .slider{
+    background-color: #6d6de7;
+}
+input:checked + .slider::before{
+    transform: translateX(26px);
+}
+
+input:focus + .slider{
+    box-shadow: 0 0 1px #6d6de7;
+}
+
+.slider.round{
+    border-radius: 34px;
+}
+
+.slider.round:before{
+    border-radius: 50%;
 }
 
 .container-row {
@@ -130,27 +201,51 @@ main {
     border-radius: 45px 45px 0 0;
     align-items: center;
     justify-content: space-around;
+    color: var(--text-color);
 }
 
+strong {
+    font-weight: 600;
+}
 
 h1 {
     font-size: 3.8vw;
     margin: 0;
+    font-weight: normal;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--text-color);;
 }
 
 h2 {
     font-size: 2.5vw;
     margin: 0;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--text-color);;
 }
 
 h3 {
     font-size: 1.5vw;
+    margin: 0;
+    font-weight: normal;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--text-color);;
+}
+
+h4 {
+    font-weight: 600;
+    font-style: normal;
     margin: 0;
 }
 
 p {
     text-align: justify;
     font-size: 16pt;
+    font-weight: normal;
+    font-style: normal;
+    color: var(--text-color);;
 }
 
 #AboutMe section {
@@ -164,7 +259,7 @@ p {
 
 #Stacks {
     width: 90%;
-    margin: 5%;
+    margin: 0 0 0 5%;
     align-items: center;
     justify-content: space-around;
 }
@@ -183,7 +278,7 @@ p {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
     max-width: min-content;
     min-height: min-content;
     padding: 50px;
@@ -192,6 +287,8 @@ p {
     align-items: center;
     gap: 20px;
     transition: 0.8s ease;
+    background-color: white;
+    color: black;
     font-size: 14pt;
 }
 
@@ -207,12 +304,19 @@ p {
 
 
 .card-descriptor {
-    background-color: #c4baec;
+    background-color: #9999ef;
     border-radius: 45px;
     padding: 30px 30px;
 }
 
-#Back-end{
+.card-descriptor h2{
+    color: black;
+}
+.card-descriptor p{
+    color: black;
+}
+
+#Back-end {
     /* padding: 25px 0 25px 50px; */
     margin-left: 5%;
     max-width: 90vw;
@@ -220,7 +324,7 @@ p {
     justify-content: space-around;
 }
 
-#Front-end{
+#Front-end {
     margin-left: 5%;
     max-width: 90vw;
     align-items: center;
@@ -229,48 +333,62 @@ p {
     box-shadow: 16px 16px 25px 5px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
 }
-#Back-end section{
-    width:55vw;
-}
 
-#Front-end section{
+#Back-end section {
     width: 55vw;
 }
 
-#Back-end img, #Front-end img, #ContactMe img{
+#Front-end section {
+    width: 55vw;
+}
+
+#Back-end img,
+#Front-end img,
+#ContactMe img {
     width: 30vw;
     object-fit: contain;
     filter: drop-shadow(10px -9px 2px #000000EE);
     transition: 1s ease;
 }
 
-#Back-end img:hover, #Front-end img:hover, #ContactMe img:hover{
+#Back-end img:hover,
+#Front-end img:hover,
+#ContactMe img:hover {
     filter: none;
 }
 
-#ContactMe{
-    background-color: #c4baec;
+#ContactMe {
+    background-color: #9999ef;
     max-width: 90vw;
     margin: 0 0 20px 5%;
     border-radius: 45px;
     padding: 25px 0 0 0px;
 }
 
-#ContactMe h2{
+#ContactMe h2 {
     text-align: center;
+    color: black;
 }
 
-#ContactMe section{
+#ContactMe section {
     justify-content: space-around;
 }
 
-.content-link{
+#ContactMe h3{
+    color: black;
+}
+
+#ContactMe p{
+    color: black;
+}
+
+.content-link {
     color: black;
     text-decoration: none;
     transition: 0.5s ease;
 }
 
-.content-link:hover{
+.content-link:hover {
     color: #0c55af;
 }
 
@@ -279,22 +397,24 @@ p {
     border: 1px solid black;
     padding: 10px;
     margin: 0 0 0 0;
-    background-color: #ffffffAA ;
+    background-color: #ffffffAA;
     min-width: 45vw;
     margin-bottom: 20px;
 }
-.email-form div{
+
+.email-form div {
     margin: 0 auto;
     display: grid;
     width: 90%;
 }
-.form-box{
+
+.form-box {
     width: 100%;
     position: relative;
     padding: 10px 0 10px 0;
 }
 
-.form-box input{
+.form-box input {
     width: 100%;
     font-size: 16pt;
     background: none;
@@ -306,13 +426,15 @@ p {
     font-family: inherit;
 }
 
-.form-box input:focus, .form-box input:valid{
+.form-box input:focus,
+.form-box input:valid {
     background-color: #fff;
     padding: 20px 0;
     border-radius: 6px;
     border: 1px solid black;
 }
-.form-box textarea{
+
+.form-box textarea {
     width: 100%;
     background: transparent;
     border: none;
@@ -323,7 +445,8 @@ p {
     font-family: inherit;
 }
 
-.form-box textarea:focus, .form-box textarea:valid{
+.form-box textarea:focus,
+.form-box textarea:valid {
     max-height: fit-content;
     border-radius: 6px;
     background-color: white;
@@ -332,7 +455,7 @@ p {
 }
 
 
-.email-form legend{
+.email-form legend {
     background-color: black;
     color: white;
     border-radius: 8px;
@@ -349,6 +472,21 @@ footer {
     display: flex;
     flex-direction: row;
 }
+
+footer section {
+    align-items: center;
+}
+
+footer section div {
+    margin: 10px 0;
+}
+
+
+footer hr {
+    width: 90%;
+    color: white;
+}
+
 
 .footer-link {
     color: white;
@@ -382,7 +520,10 @@ footer {
         font-size: 3.5vw;
         margin: 0;
     }
-    #AboutMe section,#Back-end section, #Front-end section{
+
+    #AboutMe section,
+    #Back-end section,
+    #Front-end section {
         width: 85vw;
     }
 
@@ -391,18 +532,22 @@ footer {
         margin: 0 auto;
     }
 
-    #Back-end   {
+    #Back-end {
         padding: 25px 0;
     }
-    #Back-end img,#Front-end img, #ContactMe img{
+
+    #Back-end img,
+    #Front-end img,
+    #ContactMe img {
         width: 65vw;
         object-fit: contain;
     }
-    #Front-end{
+
+    #Front-end {
         flex-direction: column-reverse;
-        flex-wrap: wrap ;
+        flex-wrap: wrap;
         padding: 0 20px 0 0;
-    }    
+    }
 
     #Stacks section {
         flex-direction: column-reverse;
@@ -411,16 +556,16 @@ footer {
 
 /* Animations */
 
-.hidden{
+.hidden {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
     transition: all 1s;
 }
 
-.show{
+.show {
     opacity: 1;
-    filter:blur(0);
+    filter: blur(0);
     transform: translateX(0%);
 }
 
@@ -440,7 +585,7 @@ footer {
 
 /* Media query */
 
-@media (max-width:935px) {
+@media (max-width:1020px) {
     .burger {
         display: block;
     }
@@ -461,11 +606,11 @@ footer {
         position: fixed;
         top: -100%;
         display: block;
-        background-color: white;
+        background-color: var(--background-color);
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        border-bottom: 0.2px solid black;
+        border-bottom: 0.2px solid var(--text-color);
     }
 
     .nav-list ul li {
@@ -497,13 +642,14 @@ footer {
     #Stacks section {
         flex-wrap: wrap-reverse;
     }
+
     .card-stack-display {
         margin-top: 25px;
     }
 }
 
-@media( prefers-reduced-motion){
-    .hidden{
+@media(prefers-reduced-motion) {
+    .hidden {
         transition: none;
     }
 }
