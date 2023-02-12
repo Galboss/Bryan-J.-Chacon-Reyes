@@ -17,11 +17,11 @@
 </head>
 
 <body>
-    <main class="main-container">
+    <main class="main-container" id="top">
 
         <header>
             <nav class="navbar ">
-                <a href="#" class="nav-link nav-logo">
+                <a href="#top" class="nav-link nav-logo">
                     <img src="assets/logo_transparent.png" alt="Bryan J. Chacón Reyes" />
                     <span> Bryan J. Chacón Reyes</span>
                 </a>
@@ -34,12 +34,12 @@
                     <input type="checkbox" checked id="dark-theme">
                     <span class="slider round"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></span>
                 </label>
-                <a href="#" class="nav-link btn nav-btn">
+                <a href="https://drive.google.com/file/d/1HrQW04RvVtMtaLMa-Y2Xbh2qGQR-6agm/view?usp=share_link" target="_blank" class="nav-link btn nav-btn">
                     <i class="fa-solid fa-file-arrow-down"></i>
                     &nbsp; <span>Descarga mi cv</span>
                 </a>
-                <a href="#" class="nav-link nav-logo" id="language">
-                    <img src="./assets/planet.png" alt="Bryan J. Chacón Reyes" />
+                <a href="./index.html" class="nav-link nav-logo" id="language">
+                    <img src="./assets/planet.png" alt="Idioma" />
                     <span>Español</span>
                 </a>
                 <div class="burger">
@@ -56,7 +56,7 @@
                     <h3 class="hidden">Hola, yo soy</h3>
                     <h1 class="hidden">Bryan José Chacón Reyes</h1>
                     <h2 class="hidden">Un <span style="color: #3511c4;">Desarrollador de Software</span></h2>
-                    <p>Soy un ingeniero de software con experiencia en el desarrollo de aplicaciones para solucionar
+                    <p>Soy un desarrollador de software con experiencia en el desarrollo de aplicaciones para solucionar
                         problemas de cualquier tipo. Aunque mi experiencia la he adquirido principalmente en un entorno
                         académico, estoy dispuesto a aplicar mis habilidades y conocimientos en el sector laboral. Soy
                         alguien que está constantemente aprendiendo nuevas cosas relacionadas con las tecnologías de
@@ -66,10 +66,10 @@
                         Si tengo que describirme en 3 palabras, me veo como alguien adaptable, transparente e innovador.
                         Soy alguien que se puede adaptar rápidamente a nuevas situaciones y entornos. Siempre estoy
                         dispuesto a tener una conversación para resolver cualquier tipo de situación y también soy un
-                        pensador innovador que siempre busca la solución más óptima."
+                        pensador innovador que siempre busca la solución más óptima.
                     </p>
                 </section>
-                <img class="hidden" src="./assets/portraid.png" />
+                <img class="hidden" data-src="./assets/portraid.png" />
             </article>
 
             <article id="Stacks" class="container-column hidden">
@@ -77,28 +77,29 @@
                 <section class="container-row">
                     <div class="card-stack-display">
                         <a href="" class="card-item" id="full-java">
-                            <img src="./assets/java_stack.png" alt="" />
+                            <img data-src="./assets/java_stack.png" alt="" />
                             <span>Java</span>
                         </a>
                         <a href="" class="card-item" id="full-node">
-                            <img src="./assets/node_stack.png" alt="" />
+                            <img data-src="./assets/node_stack.png" alt="" />
                             <span>Node JS</span>
                         </a>
                         <a href="" class="card-item" id="full-mobile">
-                            <img src="./assets/mobile_stack.png" alt="" />
-                            <span>Mobile</span>
+                            <img data-src="./assets/mobile_stack.png" alt="" />
+                            <span>Móvil</span>
                         </a>
                     </div>
                     <div class="container-column hidden">
-                        <h2>Full Stack Developer</h2>
+                        <h2>Desarrollador Full Stack</h2>
                         <p>
-                            I specialize in developing applications from scratch, starting with gathering requirements,
-                            designing the logic, database, and middleware. My objective is to deliver a user-friendly
-                            and modern interface, providing a complete solution that meets the client's needs.
+                            Me especializo en desarrollar aplicaciones desde cero, comenzando con la reunión de
+                            requisitos, diseñando la lógica, la base de datos y el middleware. Mi objetivo es entregar
+                            una interfaz amigable y moderna, proporcionando una solución completa que satisfaga las
+                            necesidades del cliente.
                         </p>
                         <div class="card-descriptor container-column ">
-                            <h2 class="hidden">Stack description</h2>
-                            <p id="descriptor" class="hidden">Please put the mouse over any card...</p>
+                            <h2 class="hidden">Descripción del Stack</h2>
+                            <p id="descriptor" class="hidden">Por favor ponga el mouse sobre cualquier carta...</p>
                         </div>
                     </div>
                 </section>
@@ -106,41 +107,45 @@
             <article class="container-row hidden" id="Back-end">
                 <section class="container-column">
                     <h2>Back-end</h2>
-                    <p>I have a solid academic background in <strong>Java, MySQL, MongoDB, and Node.js</strong>, with
-                        hands-on
-                        experience in developing backend systems. My projects have given me experience in creating
-                        <strong>REST APIs</strong>, working with databases, and building scalable and performant
-                        systems. I have also
-                        kept up with the latest trends and best practices through self-study and research. I am
-                        confident in my abilities and eager to apply my skills in a professional setting.
+                    <p>Tengo una sólida formación académica en <strong>Java, MySQL, MongoDB y Node.js</strong>, con
+                        experiencia práctica
+                        en el desarrollo de sistemas de back-end. Mis proyectos me han dado experiencia en la creación
+                        de
+                        <strong>APIs REST</strong>, trabajando con bases de datos y construyendo sistemas escalables y
+                        eficientes
+                        en términos de rendimiento. También
+                        he mantenido al tanto de las últimas tendencias y mejores prácticas a través de auto estudio y
+                        investigación. Estoy
+                        confiado en mis habilidades y ansioso de aplicarlas en un entorno profesional.
                     </p>
                 </section>
-                <img src="./assets/back_end.png" alt="" class="hidden" />
+                <img data-src="./assets/back_end.png" alt="" class="hidden" />
             </article>
             <article class="container-row" id="Front-end">
-                <img class="hidden" src="./assets/front_end.png" alt="">
+                <img class="hidden" data-src="./assets/front_end.png" alt="">
                 <section class="container-column">
                     <h2 class="hidden">Front-end</h2>
                     <p class="hidden">
-                        I am highly skilled in <strong>HTML, CSS, JS and React</strong>, which are the essential
-                        components of <strong> modern web
-                            design</strong>. With
-                        these tools, I have the ability to create visually appealing and functional web pages that have
-                        <strong> high performance </strong>and <strong> responsive design</strong>. I understand the
-                        importance of
-                        responsive design in today's world and know how to ensure that a website is accessible
-                        and <strong> user-friendly </strong> on <strong>all devices</strong>, from desktop computers
-                        to smartphones. With my expertise in HTML, CSS and JS, I can create web pages that have engaging
-                        visuals, fast loading times and intuitive navigation, making them a <strong>great user
-                            experience</stron>.
+                        Estoy altamente capacitado en <strong>HTML, CSS, JS y React</strong>, que son componentes
+                        esenciales
+                        del <strong>diseño web moderno</strong>. Con
+                        estas herramientas, tengo la capacidad de crear páginas web atractivas y funcionales que tienen
+                        <strong>alto rendimiento</strong> y <strong>diseño adaptable</strong>. Entiendo la
+                        importancia del
+                        diseño adaptable en el mundo de hoy y sé cómo garantizar que un sitio web sea accesible
+                        y <strong>amigable para el usuario</strong> en <strong>todos los dispositivos</strong>, desde
+                        computadoras de escritorio
+                        hasta smartphones. Con mi experiencia en HTML, CSS y JS, puedo crear páginas web con visuales
+                        atractivas, tiempos de carga rápidos y navegación intuitiva, lo que las hace una <strong>gran
+                            experiencia para el usuario</strong>.
                     </p>
                 </section>
             </article>
             <article class="container-column hidden" id="ContactMe">
-                <h2 class="hidden">Contact me</h2>
+                <h2 class="hidden">Contácteme</h2>
                 <div class="container-row">
                     <section class="container-column hidden">
-                        <h3>Ok let's talk!</h3>
+                        <h3>Ok, hablemos!</h3>
                         <p>
                             <span><i class="fa-brands fa-linkedin"></i>
                                 &nbspLinkedin:<a href="https://www.linkedin.com/in/bryan-j-chac%C3%B3n-reyes-aa118b228/"
@@ -152,33 +157,32 @@
                             action="mailto:bryanchaconreyes@gmail.com?subject=I saw you page and I want to talk to you about business"
                             method="POST" enctype="text/plain" class="container-column">
                             <fieldset class="email-form">
-                                <legend>I saw your page and I want to talk to you</legend>
+                                <legend>Vi su página y quiero hablar con usted</legend>
                                 <div class="hidden">
                                     <div class="form-box">
-                                        <label for="email-form-name">Name</label>
+                                        <label for="email-form-name">Nombre</label>
                                         <input type="text" name="name" id="email-form-name" required
                                             autocomplete="off" />
                                     </div>
 
                                     <div class="form-box">
-                                        <label for="email-form-email">Email</label>
+                                        <label for="email-form-email">Correo</label>
                                         <input type="email" name="cc" id="email-form-email" required
                                             autocomplete="off" />
                                     </div>
                                     <div class="form-box">
-                                        <label for="email-form-comments">Type your message here</label>
+                                        <label for="email-form-comments">Escriba su mensaje acá...</label>
                                         <textarea rows="3" cols="35" name="body" id="email-form-comments"
                                             required></textarea>
                                     </div>
                                     <div class="form-box">
-                                        <button class="btn hidden"><i class="fa-regular fa-paper-plane"></i>&nbspSend
-                                            Message</button>
+                                        <button class="btn hidden"><i class="fa-regular fa-paper-plane"></i>&nbspEnviar Mensaje</button>
                                     </div>
                                 </div>
                             </fieldset>
                         </form>
                     </section>
-                    <img src="./assets/contact_me.png" alt="" class="hidden">
+                    <img data-src="./assets/contact_me.png" alt="" class="hidden">
                 </div>
 
             </article>
@@ -186,7 +190,7 @@
         <footer class="container-column">
             <section class="container-row">
                 <div class="container-column hidden">
-                    <h4>Develop by: <br> <a href="" class="footer-link"><i class="fa-brands fa-linkedin"></i>&nbsp
+                    <h4>Desarrollado por: <br> <a href="" class="footer-link"><i class="fa-brands fa-linkedin"></i>&nbsp
                             <span>Bryan José Chacón Reyes</span></a><br>
                         <a href="https://github.com/Galboss" class="footer-link">
                             <i class="fa-brands fa-square-github"></i><span>&nbsp Galboss</span>
@@ -194,17 +198,17 @@
                     </h4>
                 </div>
                 <div class="container-column hidden">
-                    <span>©Bryan, All rights reserved.</span>
+                    <span>©Bryan J. Chacón Reyes, Todos los derechos reservados.</span>
                 </div>
                 <div class="container-column hidden">
-                    <span>This page was build with: <br>HTML, CSS, JS <br>FontAwesome</span>
+                    <span>Esta página fue construida con: <br>HTML, CSS, JS <br>FontAwesome</span>
                 </div>
             </section>
             <section class="container-column">
                 <hr>
                 <div class="container-column hidden">
-                    <h4>Assets:</h4>
-                    <a href="http://www.freepik.com" class="footer-link">1: Designed by stories / Freepik</a>
+                    <h4>Reconocimiento a sus respectivos autores de las imágenes:</h4>
+                    <a href="http://www.freepik.com" class="footer-link" target="_blank">1: Designed by stories / Freepik</a>
                     <a href="https://thenounproject.com/browse/icons/term/backend/" class="footer-link" target="_blank"
                         title="backend Icons">2: Backend by [LUTFI GANI AL ACHMAD,I Putu Dicky Adi Pranatha,Zero Team0]
                         from : Noun Project</a>
