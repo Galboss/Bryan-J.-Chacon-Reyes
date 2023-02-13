@@ -111,6 +111,13 @@ main {
     border: none;
 }
 
+#cv-download-short{
+    display: none;
+}
+#cv-download-long{
+    display: inline-block;
+}
+
 .btn:hover {
     background-color: var(--background-color);
     filter: none;
@@ -499,6 +506,110 @@ footer hr {
 }
 
 
+
+
+/* Animations */
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+}
+
+
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+/* Media query */
+
+@media(max-width:330px){
+    #cv-download-short{
+        display: none   ;
+    }
+    #cv-download-long{
+        display: none;
+    }
+}
+
+@media (max-width:529px) {
+    .hidden{
+        filter: none;
+        transition: 0s none ;
+    }
+    .navbar{
+        gap:5px;
+    }
+
+    .nav-switch-toggler{
+        margin: 0 0 0 auto;
+    }
+
+    .nav-list{
+        padding: 0px;
+    }
+
+    #cv-download-short{
+        display: inline-block;
+    }
+    #cv-download-long{
+        display: none;
+    }
+    #language{
+        margin: 0;
+    }
+    #language img{
+        margin: 0px;
+    }
+
+    .container-row, .container-column{
+        justify-content: space-around;
+    }
+    #AboutMe{
+        margin:100px auto 0 auto;
+        max-width: 100vw;
+        border-radius: 0px;
+    }
+    
+    .card-stack-display {
+        margin-top: 25px;
+        flex-wrap: wrap;
+    }
+    #AboutMe img{
+        margin:0;
+    }
+
+    #ContactMe{
+        margin: 0px;
+        max-width: 100%;
+        border-radius: 0;
+    }
+    #ContactMe div{
+        justify-content: space-around;
+        align-items: center;
+    }
+    #Front-end{
+        border-radius: 0px;
+    }
+    
+}
+
 @media(max-width:768px) {
     .container-row {
         flex-direction: column;
@@ -554,36 +665,6 @@ footer hr {
     }
 }
 
-/* Animations */
-
-.hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1s;
-}
-
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0%);
-}
-
-
-
-@keyframes typing {
-    from {
-        width: 0
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent
-    }
-}
-
-/* Media query */
 
 @media (max-width:1020px) {
     .burger {

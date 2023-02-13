@@ -3,7 +3,7 @@ const observer = new IntersectionObserver(elements =>
 );
 
 const imgObserver = new IntersectionObserver(imgs=>{
-    imgs.forEach((img,imgObserver)=>{
+    imgs.forEach((img)=>{
         if(img.isIntersecting){
             preloadImg(img.target);
             imgObserver.unobserve(img.target);
