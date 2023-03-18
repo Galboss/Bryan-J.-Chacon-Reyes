@@ -62,6 +62,7 @@ main {
     align-items: center;
     justify-content: space-around;
     gap: 20px;
+    padding: 0px;
 }
 
 .nav-link:hover {
@@ -280,6 +281,9 @@ p {
     justify-content: space-around;
     margin: auto 0;
 }
+.txt-center{
+    text-align: center;
+}
 
 .card-item {
     display: flex;
@@ -347,6 +351,38 @@ p {
 
 #Front-end section {
     width: 55vw;
+}
+
+#Projects {
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+    gap: 25px;
+}
+
+#Projects a{
+    color: var(--text-color);
+    font-size: 16pt;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+
+#Projects a:hover{
+    text-decoration: underline;
+    color: #9999ef;
+}
+
+#Projects img{
+    max-width: 50%;
+    height: 25%;
+    border-radius: 15px;
+}
+#Projects div{
+    max-width: 50%;
+}
+
+#Projects img:hover{
+    transform: scale(1.05) ;
 }
 
 #Back-end img,
@@ -662,6 +698,10 @@ footer hr {
 
     #Stacks section {
         flex-direction: column-reverse;
+    }
+
+    #Projects div{
+        max-width: 90%;
     }
 }
 

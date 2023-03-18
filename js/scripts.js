@@ -76,7 +76,7 @@ fullNode.addEventListener("mouseover", () => {
     else
         cardDescriptor.innerHTML = `<strong>Node JS Stack:</strong> Esta es mi stack favorito para desarrollar <strong>aplicaciones web</strong>.
         Puedo desarrollar completamente toda la lógica del proyecto usando JavaScript, la conexión con la <strong>base de datos relacional</strong> y <strong>no relacional</strong>.
-        Puedo crear <strong>puntos finales RESTful</strong> para obtener los datos almacenados en la base de datos. Luego puedo usar React para crear
+        Puedo crear <strong>puntos de acceso RESTful</strong> para obtener los datos almacenados en la base de datos. Luego puedo usar React para crear
         el <strong>Front-End</strong> de la aplicación o simplemente usar JavaScript sin envoltorio <strong>ES6</strong>.`
 });
 
