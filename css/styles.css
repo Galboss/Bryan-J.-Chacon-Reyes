@@ -36,7 +36,7 @@ main {
     background-color: var(--background-color);
     min-height: 75px;
     align-items: center;
-    border-bottom: 0.2px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
     transition: 1s ease;
 }
 
@@ -278,8 +278,9 @@ p {
     min-width: 45vw;
     height: min-content;
     flex-grow: 1;
-    justify-content: space-around;
+    justify-content: center;
     margin: auto 0;
+    gap:2dvw;
 }
 .txt-center{
     text-align: center;
@@ -292,7 +293,7 @@ p {
     color: var(--text-color);
     max-width: min-content;
     min-height: min-content;
-    padding: 50px;
+    padding: 20px;
     box-shadow: 0px 0px 31px -7px rgba(0, 0, 0, 0.39);
     border-radius: 15%;
     align-items: center;
@@ -318,6 +319,7 @@ p {
     background-color: #9999ef;
     border-radius: 45px;
     padding: 30px 30px;
+    border: 4px solid black;
 }
 
 .card-descriptor h2{
@@ -363,7 +365,6 @@ p {
 #Projects a{
     color: var(--text-color);
     font-size: 16pt;
-    text-decoration: none;
     transition: 0.4s ease;
 }
 
@@ -383,6 +384,32 @@ p {
 
 #Projects img:hover{
     transform: scale(1.05) ;
+}
+
+#BMP{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 90%;
+    margin:0 auto;
+    gap: 25px;
+}
+#BMP img{
+    max-width: 50%;
+    height: 25%;
+    border-radius: 15px;
+}
+#BMP h3{
+    text-align: start;
+}
+#BMP a{
+    color: var(--text-color);
+    font-size: 16pt;
+    transition: 0.4s ease;
+}
+#BMP a:hover{
+    text-decoration: underline;
+    color: #9999ef;
 }
 
 #Back-end img,
@@ -406,6 +433,7 @@ p {
     margin: 0 0 20px 5%;
     border-radius: 45px;
     padding: 25px 0 0 0px;
+    border:3px solid black;
 }
 
 #ContactMe h2 {
@@ -437,7 +465,7 @@ p {
 
 .email-form {
     border-radius: 22px;
-    border: 1px solid black;
+    border: 3px solid black;
     padding: 10px;
     margin: 0 0 0 0;
     background-color: #ffffffAA;

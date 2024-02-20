@@ -24,6 +24,7 @@ imgs.forEach(img=>imgObserver.observe(img));
 const fullJava = document.getElementById("full-java");
 const fullNode = document.getElementById("full-node");
 const fullMobile = document.getElementById("full-mobile");
+const c_stack = document.getElementById("c-stack")
 const cardDescriptor = document.getElementById("descriptor");
 
 const styles = getComputedStyle(document.documentElement);
@@ -58,7 +59,7 @@ fullJava.addEventListener("mouseover", () => {
         the applications requires a <strong>web interface</strong>, I can design a complete web page to control all the application via web
         creating a modern UI and consuming <strong>RESTful APIs</strong>.`;
     else
-        cardDescriptor.innerHTML = `<strong>Java Stack:</strong> esta es mi stack regular para desarrollar aplicaciones de cualquier tipo.
+        cardDescriptor.innerHTML = `<strong>Java Stack:</strong> este es mi stack regular para desarrollar aplicaciones de cualquier tipo.
         Tengo la capacidad de crear bases de datos relacionales con procedimientos y funciones almacenadas, luego crear el middleware
         que conecta la base de datos con la lógica del proyecto utilizando Java. Y finalmente, puedo crear interfaces de usuario para esas
         aplicaciones. Si la aplicación requiere una <strong>interfaz de escritorio</strong>, puedo usar Java para desarrollar la interfaz, o si
@@ -74,7 +75,7 @@ fullNode.addEventListener("mouseover", () => {
         I can create <strong>RESTful end-points</strong> to get de data that is stored on the database. Then I can use React to create
         the <strong>Front-End</strong> of the application or simply use vanilla Javascript <strong>ES6</strong>.`
     else
-        cardDescriptor.innerHTML = `<strong>Node JS Stack:</strong> Esta es mi stack favorito para desarrollar <strong>aplicaciones web</strong>.
+        cardDescriptor.innerHTML = `<strong>Node JS Stack:</strong> Este es mi stack favorito para desarrollar <strong>aplicaciones web</strong>.
         Puedo desarrollar completamente toda la lógica del proyecto usando JavaScript, la conexión con la <strong>base de datos relacional</strong> y <strong>no relacional</strong>.
         Puedo crear <strong>puntos de acceso RESTful</strong> para obtener los datos almacenados en la base de datos. Luego puedo usar React para crear
         el <strong>Front-End</strong> de la aplicación o simplemente usar JavaScript sin envoltorio <strong>ES6</strong>.`
@@ -90,6 +91,20 @@ fullMobile.addEventListener("mouseover", () => {
         <strong>Kotlin</strong> o <strong>Java</strong> idiomas. Con la ayuda de <strong>Retrofit2</strong>
         puedo consumir <strong>APIs RESTful</strong> y obtener cualquier tipo de datos para manipularlos en un <strong>dispositivo Android</strong>`
 });
+
+c_stack.addEventListener("mouseover", () => {
+    if(lang=="en")
+        cardDescriptor.innerHTML = `<strong>C# stack:</strong> With <strong>.NET Core, SQL Server and Blazor</strong>, I can develop comprehensive applications, 
+        covering both the <strong>backend</strong> and <strong>frontend</strong>, along with APIs and databases. This combination ensures a <strong>secure</strong> and <strong>scalable backend</strong>, 
+        while facilitating the creation of a <strong>dynamic user interface</strong>. Together, these elements provide all the necessary tools to <strong>create
+        robust and fluid applications.</strong>`
+    else
+        cardDescriptor.innerHTML= `<strong>C# Stack:</strong> Con <strong>.NET Core, SQL server y Blazor</strong>, puedo desarrollar aplicaciones completas, 
+        abarcando tanto el <strong>backend</strong> como el <strong>frontend</strong>, APIs y bases de datos. Esta combinación garantiza un backend <strong>seguro y escalable</strong>, 
+        al tiempo que facilita la <strong>creación de una interfaz de usuario dinámica</strong>. Combinados, estos elementos proporcionan todas las 
+        herramientas necesarias para <strong>crear aplicaciones robustas y fluidas.</strong>`
+});
+
 
 themeSwitch.addEventListener("change", () => {
     let st = document.documentElement.style
